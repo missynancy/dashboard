@@ -7,7 +7,6 @@ import '../index.css'
 function Index(){
     return(
         <body>
-
             <header className='header'>
                 <h1>Dashboard</h1>
                 <nav className="navbar">
