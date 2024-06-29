@@ -1,13 +1,15 @@
-import Header from './Index.jsx';
+import React from 'react'
+import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom'
+import Header from './components/Index.jsx';
+import MainLayout from './layout/MainLayout.jsx';
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout/>}>
+    </Route>
 
-function App() {
-    return(
-        <>
-            <Header></Header>
-        </>
-    );
-  
+));
+export default function App() {
+    return <RouterProvider router={router}/>;
 }
 
-export default App
