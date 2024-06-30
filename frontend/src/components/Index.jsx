@@ -50,10 +50,10 @@ function Index(){
                             <i className='bx bx-chevron-right'></i>
                         </li>
                         <li>
-			    <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
+			                <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
                             <i className='bx bx-chevron-right'></i>
-			</li>
-                        </ul>`
+			            </li>
+                        </ul>
                     </nav>
                     <div className="card">
                         <div className="card-top">
