@@ -100,7 +100,7 @@ button:hover{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px 0 10px; 
+  padding: 0 10px 0 10px;
 }
 .top-img{
   display: flex;
@@ -117,6 +117,9 @@ header img{
   justify-content: center;
   text-align: center;
   font-size: 19px;
+  width: 50px;
+  height: 30px;
+  background-color: #888;
 }
 .header-foot{
   display: flex;
