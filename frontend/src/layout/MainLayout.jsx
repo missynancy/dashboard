@@ -1,4 +1,3 @@
-
 import { Outlet } from 'react-router-dom'
 import Index from '../components/Index'
 const MainLayout = () => {

@@ -2,8 +2,6 @@ import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
 import img4 from '../assets/img4.jpg';
-import '../index.css'
-
 function Index(){
     return(
         <body>
@@ -22,7 +20,6 @@ function Index(){
                     <i className='bx bx-bell message-icon'></i>
                 </div>
             </div>
-            <div className="body">
                 <header className='header'>
                     <nav className="navbar">
                         <ul>
@@ -54,7 +51,7 @@ function Index(){
                                 <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
                                 <i className='bx bx-chevron-right'></i>
                             </li>
-                        </ul>`
+                        </ul>
                     </nav>
                     <div className="card">
                         <div className="card-top">
@@ -78,62 +75,6 @@ function Index(){
                         <i className='bx bx-chevron-down bx-down'></i>
                     </div>
                 </header>
-                
-                <div className="dash-body">
-                    <div className="profile">
-                        <div className="profile-1">
-                            <h2>Hi, Lewis</h2>
-                            <p>Your HR status report</p>
-                            <div className="status">
-                                <div className="status-container">
-                                    <div className="status-top">
-                                        <i className='bx bx-user user-icon'></i>
-                                        <i className='bx bx-dots-horizontal-rounded dots'></i>
-                                    </div>
-                                    <div className="status-number">
-                                        <h1 className='numbers'>4,342</h1>
-                                        <h4>Total Employees</h4>
-                                    </div>
-                                    <div className="status-bottom">
-                                        <i className='bx bx-up-arrow-circle arrow-circle'></i>
-                                        <p>44.2%</p>
-                                    </div>
-                                </div>
-                                <div className="status-container">
-                                    <div className="status-top">
-                                        <i className='bx bxs-calendar-event'></i>
-                                        <i className='bx bx-dots-horizontal-rounded dots'></i>
-                                    </div>
-                                    <div className="status-number">
-                                        <h1 className='numbers'>4,342</h1>
-                                        <h4>Total Employees</h4>
-                                    </div>
-                                    <div className="red">
-                                        <i className='bx bx-up-arrow-circle arrow-circle'></i>
-                                        <p>44.2%</p>
-                                    </div>
-                                </div>
-                                <div className="status-container">
-                                    <div className="status-top">
-                                        <i className='bx bx-plus'></i>
-                                        <i className='bx bx-dots-horizontal-rounded dots'></i>
-                                    </div>
-                                    <div className="status-number">
-                                        <h1 className='numbers'>4,342</h1>
-                                        <h4>Total Employees</h4>
-                                    </div>
-                                    <div className="status-bottom">
-                                        <i className='bx bx-up-arrow-circle arrow-circle'></i>
-                                        <p>44.2%</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="profile-2">hello</div>
-                    </div>
-                </div>
-            </div>
-                 
         </body>
     );
 }
