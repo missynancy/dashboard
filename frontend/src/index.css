@@ -32,7 +32,6 @@ button:hover{
 .body{
   display: flex;
   position: absolute;
-  top: 65px;
   margin: 0%;
 }
 .header{
@@ -45,9 +44,7 @@ button:hover{
   bottom: 0;
   padding: 0.5%;
   background-color: #f0eded;
-  
-  
- 
+  margin-top: 40px; 
 }
 
 .navbar ul{
@@ -139,18 +136,8 @@ header img{
 }
 
 
-/* dashboard*/
-.dashboard{
-  width: 100%;
-  margin-left: 270px;
-  height: 100%;
-  margin-top: 0;
-  right: 0;
-  padding: 30px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+
+
 
 /* topbar */
 .top-bar{
@@ -224,8 +211,8 @@ header img{
 
 /* dash-body */
 .dash-body{
-  padding-left: 280px;
   width: 100%;
+  margin-top: -10pc;
   
 
 }
@@ -238,6 +225,8 @@ header img{
   justify-content: space-between;
   background-color: #faf9f9;
   border-radius: 10px;
+  padding: 10px;
+  
 
 }
 .profile-1{

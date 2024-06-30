@@ -22,37 +22,38 @@ function Index(){
                     <i className='bx bx-bell message-icon'></i>
                 </div>
             </div>
-            <header className='header body'>
-                <nav className="navbar">
-                    <ul>
-                        <li>
-                            <a href="#" className='active'><i className='bx bxs-dashboard'></i> Dashbard</a>
-                            <i className='bx bx-chevron-right'></i>
-                        </li>
-                        <li>
-                            <a href="#"><i className='bx bx-user'></i> Employee</a>
-                            <i className='bx bx-chevron-right'></i>
-                        </li>
-                        <li>
-                            <a href="#"><i className='bx bx-list-check'></i> Checklist</a>
-                            <i className='bx bx-chevron-right'></i>
-                        </li>
-                        <li>
-                            <a href="#"><i className='bx bx-time'></i> Time Off</a>
-                            <i className='bx bx-chevron-right'></i>
-                        </li>
-                        <li>
-                            <a href="#"><i className='bx bxs-calendar-check'></i> Attendance</a>
-                            <i className='bx bx-chevron-right'></i>
-                        </li>
-                        <li>
-                            <a href="#"><i className='bx bxs-calendar-alt'></i> Payroll</a>
-                            <i className='bx bx-chevron-right'></i>
-                        </li>
-                        <li>
-			                <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
-                            <i className='bx bx-chevron-right'></i>
-			            </li>
+            <div className="body">
+                <header className='header'>
+                    <nav className="navbar">
+                        <ul>
+                            <li>
+                                <a href="#" className='active'><i className='bx bxs-dashboard'></i> Dashbard</a>
+                                <i className='bx bx-chevron-right'></i>
+                            </li>
+                            <li>
+                                <a href="#"><i className='bx bx-user'></i> Employee</a>
+                                <i className='bx bx-chevron-right'></i>
+                            </li>
+                            <li>
+                                <a href="#"><i className='bx bx-list-check'></i> Checklist</a>
+                                <i className='bx bx-chevron-right'></i>
+                            </li>
+                            <li>
+                                <a href="#"><i className='bx bx-time'></i> Time Off</a>
+                                <i className='bx bx-chevron-right'></i>
+                            </li>
+                            <li>
+                                <a href="#"><i className='bx bxs-calendar-check'></i> Attendance</a>
+                                <i className='bx bx-chevron-right'></i>
+                            </li>
+                            <li>
+                                <a href="#"><i className='bx bxs-calendar-alt'></i> Payroll</a>
+                                <i className='bx bx-chevron-right'></i>
+                            </li>
+                            <li>
+                                <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
+                                <i className='bx bx-chevron-right'></i>
+                            </li>
                         </ul>`
                     </nav>
                     <div className="card">
@@ -129,10 +130,11 @@ function Index(){
                         </div>
                         <div className="profile-2">hello</div>
                     </div>
-                    
                 </div>
+            </div>
+                 
                 
-            </header>
+            
         </body>
     );
 }
