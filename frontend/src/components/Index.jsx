@@ -14,7 +14,7 @@ function Index(){
                         <i className='bx bx-search'></i>
                         <input type="search"  placeholder='search'/>
                         <i className='bx bx-command message-icon'></i>
-                            
+
                     </div>
                 </form>
                 <div className="dash-icons">
@@ -22,39 +22,38 @@ function Index(){
                     <i className='bx bx-bell message-icon'></i>
                 </div>
             </div>
-            <div className="body">
-                <header className='header'>
-                    <nav className="navbar">
-                        <ul>
-                            <li>
-                                <a href="#" className='active'><i className='bx bxs-dashboard'></i> Dashbard</a> 
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                            <li>
-                                <a href="#"><i className='bx bx-user'></i> Employee</a>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                            <li>
-                                <a href="#"><i className='bx bx-list-check'></i> Checklist</a>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                            <li>
-                                <a href="#"><i className='bx bx-time'></i> Time Off</a>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                            <li>
-                                <a href="#"><i className='bx bxs-calendar-check'></i> Attendance</a>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                            <li>
-                                <a href="#"><i className='bx bxs-calendar-alt'></i> Payroll</a>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                            <li>
-                                <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                        </ul>
+            <header className='header body'>
+                <nav className="navbar">
+                    <ul>
+                        <li>
+                            <a href="#" className='active'><i className='bx bxs-dashboard'></i> Dashbard</a>
+                            <i className='bx bx-chevron-right'></i>
+                        </li>
+                        <li>
+                            <a href="#"><i className='bx bx-user'></i> Employee</a>
+                            <i className='bx bx-chevron-right'></i>
+                        </li>
+                        <li>
+                            <a href="#"><i className='bx bx-list-check'></i> Checklist</a>
+                            <i className='bx bx-chevron-right'></i>
+                        </li>
+                        <li>
+                            <a href="#"><i className='bx bx-time'></i> Time Off</a>
+                            <i className='bx bx-chevron-right'></i>
+                        </li>
+                        <li>
+                            <a href="#"><i className='bx bxs-calendar-check'></i> Attendance</a>
+                            <i className='bx bx-chevron-right'></i>
+                        </li>
+                        <li>
+                            <a href="#"><i className='bx bxs-calendar-alt'></i> Payroll</a>
+                            <i className='bx bx-chevron-right'></i>
+                        </li>
+                        <li>
+			                <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
+                            <i className='bx bx-chevron-right'></i>
+			            </li>
+                        </ul>`
                     </nav>
                     <div className="card">
                         <div className="card-top">
@@ -133,9 +132,7 @@ function Index(){
                     
                 </div>
                 
-            </div>
-                
-                
+            </header>
         </body>
     );
 }
