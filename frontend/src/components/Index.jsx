@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
@@ -24,15 +25,15 @@ function Index(){
                     <nav className="navbar">
                         <ul>
                             <li>
-                                <a href="#" className='active'><i className='bx bxs-dashboard'></i> Dashbard</a>
+                                <Link to='/home' className='active'><i className='bx bxs-dashboard'></i> Dashbard</Link>
                                 <i className='bx bx-chevron-right'></i>
                             </li>
                             <li>
-                                <a href="#"><i className='bx bx-user'></i> Employee</a>
+                                <Link to='/employee'><i className='bx bx-user'></i> Employee</Link>
                                 <i className='bx bx-chevron-right'></i>
                             </li>
                             <li>
-                                <a href="#"><i className='bx bx-list-check'></i> Checklist</a>
+                                <Link to='/checklist'><i className='bx bx-list-check'></i> Checklist</Link>
                                 <i className='bx bx-chevron-right'></i>
                             </li>
                             <li>
@@ -44,7 +45,7 @@ function Index(){
                                 <i className='bx bx-chevron-right'></i>
                             </li>
                             <li>
-                                <a href="#"><i className='bx bxs-calendar-alt'></i> Payroll</a>
+                                <Link to='/payroll'><i className='bx bxs-calendar-alt'></i> Payroll</Link>
                                 <i className='bx bx-chevron-right'></i>
                             </li>
                             <li>

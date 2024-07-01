@@ -40,7 +40,7 @@ button:hover{
   width: 270px;
   text-align: center;
   background-color: #f0eded;
-  position: absolute;
+  position: fixed;
   margin-top: 40px; 
   margin-left: -13px;
   height: 100vh;
@@ -88,7 +88,7 @@ button:hover{
   background-color: #fff;
   padding: 10px 0 10px 0;
   border-radius: 10px;
-  margin: 10px 0 10px 0;
+  margin: 30px 0 20px 0;
 }
 .card-top{
   display: flex;
@@ -205,20 +205,24 @@ header img{
 }
 
 /* dash-body */
-.dash-body{
-  width: 100%;
-  margin-top: -10pc;
+.home {
   
-
+  direction: block;
+  opacity: 1;
+  padding: 0 30px;
+  padding-left: 270px;
+  padding-top: 50px;
+  height: auto;
 }
 
 /* profile */
 .profile{
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #faf9f9;
+  background-color: rgb(247, 245, 245);
   border-radius: 10px;
   padding: 10px;
   
@@ -310,3 +314,161 @@ header img{
   padding-top: 20px;
 }
 
+/* middle-header */
+.middle-header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+}
+.middle-header form{
+  border: 1px solid #f0eded;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+.filter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* attendance */
+.attendance{
+  margin-top: -20px;
+  text-transform: capitalize;
+}
+.attendance-list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1rem;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  text-align: left;
+  background-color:rgb(247, 245, 245);
+
+}
+.table th,
+table td{
+  padding: 12px;
+  align-items: center;
+}
+.table tbody tr{
+  border-bottom: 1px solid rgb(247, 245, 245);
+}
+.table tbody tr:nth-of-type(even){
+  background-color: rgb(247, 245, 245);
+}
+.table tbody tr.active{
+  font-weight: bold;
+  
+}
+.table tbody tr:last-of-type{
+  border-bottom: 1px solid black;
+}
+.table tbody img{
+  width: 20px;
+  border-radius: 20px;
+}
+tbody tr button{
+  background-color: transparent;
+  color: black;
+}
+tbody tr .team{
+  font-size: 15px;
+  border: 1px solid black;
+}
+tbody tr .active-btn{
+  border: 1px solid rgb(53, 240, 53);
+  color: rgb(53, 240, 53);
+}
+/* payslip */
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+form {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.payroll{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+input[type="text"],
+input[type="number"] {
+  
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+button.generated {
+  background-color: green;
+  cursor: default;
+}
+
+button.generated:hover {
+  background-color: green;
+}
