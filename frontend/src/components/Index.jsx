@@ -7,7 +7,7 @@ function Index(){
     return(
         <body>
             <div className="top-bar">
-                <h2><a href="#">Dashboard</a></h2>
+                <h2><a href="/">Dashboard</a></h2>
                 <form action="">
                     <div className="search">
                         <i className='bx bx-search'></i>
@@ -25,7 +25,7 @@ function Index(){
                     <nav className="navbar">
                         <ul>
                             <li>
-                                <Link to='/home' className='active'><i className='bx bxs-dashboard'></i> Dashbard</Link>
+                                <Link to='/' className='active'><i className='bx bxs-dashboard'></i> Dashbard</Link>
                                 <i className='bx bx-chevron-right'></i>
                             </li>
                             <li>
