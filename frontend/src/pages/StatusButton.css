@@ -1,0 +1,32 @@
+.status-button {
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .status-active {
+    background-color: transparent;
+    color: green;
+    border: 2px solid green;
+  }
+  
+  .status-probation {
+    background-color: transparent;
+    color: blue;
+    border: 2px solid blue;
+  }
+  
+  .status-onboarding {
+    background-color: transparent;
+    color: yellow;
+    border: 2px solid yellow;
+  }
+  
+  .status-on-leave {
+    background-color: transparent;
+    color: red;
+    border: 2px solid red;
+  }
+  

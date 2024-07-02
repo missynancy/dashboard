@@ -213,6 +213,11 @@ header img{
   padding-left: 270px;
   padding-top: 50px;
   height: auto;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* profile */
@@ -391,7 +396,27 @@ tbody tr .active-btn{
   border: 1px solid rgb(53, 240, 53);
   color: rgb(53, 240, 53);
 }
-/* payslip */
+/* payroll */
+
+.payroll-form{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.payroll-form .form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  width: 40%;
+}
+.payroll-form button{
+  width: 40%;
+  text-align: center;
+}
 .container {
   background-color: white;
   padding: 20px;
@@ -399,16 +424,22 @@ tbody tr .active-btn{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+.container h1{
+  margin-top: 40px;
+  margin-bottom: -10px;
 }
 
-h1, h2 {
+.payroll h1, h2 {
   color: #333;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-form {
-  text-align: left;
-  margin-bottom: 20px;
-}
+
 
 .form-group {
   margin-bottom: 15px;
@@ -418,34 +449,33 @@ label {
   display: block;
   margin-bottom: 5px;
   color: #555;
+  font-weight: 600;
 }
-.payroll{
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-  align-items: center;
-}
+
 input[type="text"],
-input[type="number"] {
-  
+input[type="number"],
+input[type="email"],
+select {
+  width: 100%;
   padding: 8px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-button {
-  background-color: #007bff;
+.button-submit {
+  background-color: #0c0c0c;
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  font-size: 12px;
+  
 }
 
-button:hover {
-  background-color: #0056b3;
+.button-submit:hover {
+  background-color: #1e8f08;
 }
 
 table {
@@ -472,3 +502,31 @@ button.generated {
 button.generated:hover {
   background-color: green;
 }
+
+/*  */
+/*employee-form  */
+.employee-form{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  width: 100%;
+}
+.form-group input{
+  width: 100%;
+}
+.employee-form button{
+  width: 100%;
+  text-align: center;
+}
+
+/* checklist */
+
+
