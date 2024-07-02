@@ -24,6 +24,7 @@ const Payroll = ({ addPayroll }) => {
       alert('Please enter valid payroll details.');
     }
   };
+  
 
   return (
     <div className='home'>

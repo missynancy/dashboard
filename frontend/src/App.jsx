@@ -4,7 +4,7 @@ import MainLayout from './layout/MainLayout.jsx';
 import Home from './pages/Home.jsx'
 import Employee from './pages/Employee.jsx'
 import Payroll  from './pages/Payroll.jsx';
-import PayrollTable from './pages/Payrolltable.jsx';
+// import PayrollTable from './pages/Payrolltable.jsx';
 import EmployeeForm from './pages/Employee.jsx';
 import EmployeeTable from './pages/EmployeeTable.jsx';
 import ErrorBoundary from './pages/ErrorBoundaries.jsx';
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
 ) 
 const App = () => {
 
-    const [payrolls, setPayrolls] = useState([]);
+  const [payrolls, setPayrolls] = useState([]);
 
   const addPayroll = (payroll) => {
     setPayrolls([...payrolls, { ...payroll, generated: false }]);
@@ -82,14 +82,14 @@ const App = () => {
         </script>
       </body>
       </html>
-    `);
-    payslipWindow.document.close();
-  };
-  const [employees, setEmployees] = useState([]);
+        `);
+        payslipWindow.document.close();
+      };
+      const [employees, setEmployees] = useState([]);
 
-  const addEmployee = (employee) => {
-    setEmployees([...employees, employee]);
-  }
+      const addEmployee = (employee) => {
+        setEmployees([...employees, employee]);
+      }
   
     
     return(
@@ -97,7 +97,7 @@ const App = () => {
             <RouterProvider router={router} />
             
             
-            <div className="container">
+           {/* <div className="container">
                 <h1>Employee List System</h1>
                 <EmployeeForm addEmployee={addEmployee} />
                 <EmployeeTable employees={employees} />
@@ -106,7 +106,7 @@ const App = () => {
                 <h1>Payroll management</h1>
                 <Payroll addPayroll={addPayroll} />
                 <PayrollTable payrolls={payrolls} generatePayslip={generatePayslip} />
-            </div>
+            </div>*/}
            
             
             
