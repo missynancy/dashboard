@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 
-const EmployeeForm = ({ addEmployee }) => {
+const EmployeeForm = () => {
   const [employeeId, setEmployeeID] = useState('');
   const [employeeName, setEmployeeName] = useState('');
   const [email, setEmail] = useState('');
@@ -10,21 +9,47 @@ const EmployeeForm = ({ addEmployee }) => {
   const [team, setTeam] = useState('');
   const [department, setDepartment] = useState('');
 
+ 
+  useEffect(() => {
+    const storedData = localStorage.getItem('userData');
+    if (storedData) {
+      const parsedData = JSON.parse(storedData);
+      if (Array.isArray(parsedData)) {
+        setEmployees(parsedData);
+      } else {
+        console.error('Stored data is not an array:', parsedData);
+      }
+    }
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (employeeName && email && role && status && team && department) {
-      addEmployee({ employeeId, employeeName, email, role, status, team, department });
-      setEmployeeID('');
-      setEmployeeName('');
-      setEmail('');
-      setRole('');
-      setStatus('Active');
-      setTeam('');
-      setDepartment('');
-    } else {
-      alert('Please enter all employee details.');
-    }
+
+   const newEmployee = {
+      employeeId,
+      employeeName,
+      email,
+      role,
+      status,
+      team,
+      department,
+    };
+
+    localStorage.setItem('userData', JSON.stringify(newEmployee));
+    alert('User data saved!');
+
+    // Clear form fields
+    setEmployeeId('');
+    setEmployeeName('');
+    setEmail('');
+    setRole('');
+    setStatus('');
+    setTeam('');
+    setDepartment('');
+
   };
+
+  
 
   return (
     <div className="home">
@@ -98,10 +123,6 @@ const EmployeeForm = ({ addEmployee }) => {
       </form>
     </div>
   );
-};
-
-EmployeeForm.propTypes = {
-  addEmployee: PropTypes.func.isRequired,
 };
 
 export default EmployeeForm;

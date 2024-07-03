@@ -10,7 +10,7 @@ import EmployeeTable from './pages/EmployeeTable.jsx';
 import ErrorBoundary from './pages/ErrorBoundaries.jsx';
 
 import './index.css'
-import PayrollTable from './pages/Payrolltable.jsx';
+// import PayrollTable from './pages/Payrolltable.jsx';
 const router = createBrowserRouter(
     createRoutesFromElements
     (
@@ -18,7 +18,7 @@ const router = createBrowserRouter(
            <Route index element={<Home />}/> 
            <Route path='/employee' element={<Employee />}/> 
            <Route path='/payroll' element={<Payroll />}/> 
-           <Route path='/payrollTable' element={<PayrollTable />}/> 
+           {/*<Route path='/payrollTable' element={<PayrollTable />}/> */}
 
       </Route>
     )
