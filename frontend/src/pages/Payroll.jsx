@@ -1,30 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Payroll = ({ addPayroll }) => {
+
   const [employeeId, setEmployeeId] = useState('');
   const [employeeName, setEmployeeName] = useState('');
   const [hoursWorked, setHoursWorked] = useState('');
   const [hourlyRate, setHourlyRate] = useState('');
   const [deductions, setDeductions] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const hours = parseFloat(hoursWorked);
-    const rate = parseFloat(hourlyRate);
-    const deduction = parseFloat(deductions);
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-    if (employeeId && employeeName && hours > 0 && rate > 0 && deduction >= 0) {
-      addPayroll({ employeeId, employeeName, hoursWorked: hours, hourlyRate: rate, deductions: deduction });
-      setEmployeeId('');
-      setEmployeeName('');
-      setHoursWorked('');
-      setHourlyRate('');
-      setDeductions('');
-    } else {
-      alert('Please enter valid payroll details.');
-    }
+    const employeeData = {
+      employeeId,
+      employeeName,
+      hoursWorked,
+      hourlyRate,
+      deductions,
+    };
+
+    localStorage.setItem('employeeData', JSON.stringify(employeeData));
+    alert('Employee data saved!');
   };
-  
+
+  const [employeeData, setEmployeeData] = useState(null);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem('employeeData');
+
+    if (storedData) {
+      setEmployeeData(JSON.parse(storedData));
+    }
+  }, []);
+
+
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const hours = parseFloat(hoursWorked);
+//     const rate = parseFloat(hourlyRate);
+//     const deduction = parseFloat(deductions);
+
+//     if (employeeId && employeeName && hours > 0 && rate > 0 && deduction >= 0) {
+//       addPayroll({ employeeId, employeeName, hoursWorked: hours, hourlyRate: rate, deductions: deduction });
+//       setEmployeeId('');
+//       setEmployeeName('');
+//       setHoursWorked('');
+//       setHourlyRate('');
+//       setDeductions('');
+//     } else {
+//       alert('Please enter valid payroll details.');
+//     }
+//   };
 
   return (
     <div className='home'>
@@ -53,7 +80,22 @@ const Payroll = ({ addPayroll }) => {
           <button type="submit" className='button-submit'>Add Payroll</button>
         </form>
       </div>
+
+      <div>
+          {employeeData ? (
+            <div>
+              <h2>User Information</h2>
+              <p>Name: {employeeData.employeeId}</p>
+              <p>Username: {employeeData.employeeName}</p>
+              <p>Age: {employeeData.deductions}</p>
+            </div>
+          ) : (
+            <p>No user data found</p>
+          )}
+      </div>
+
     </div>
+
 
   );
 };
