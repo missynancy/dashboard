@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+// import './LoginPage.css'; // Reuse the same CSS for simplicity
 
-const AdminLoginPage = ({ onLogin }) => {
+const EmployeeLoginPage = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setError('');
 
-    // Simulate admin login process
-    if (email === 'admin@example.com' && password === 'adminpassword') {
-      onLogin({ email, role: 'admin' });
+    if (!email || !password) {
+      setError('Please fill in all fields');
+      return;
+    }
+
+    // Simulate employee login process
+    if (email === 'employee@example.com' && password === 'employeepassword') {
+      onLogin({ email, role: 'employee' });
     } else {
-      alert('Invalid email or password');
+      setError('Invalid email or password');
     }
   };
 
   return (
     <div className="login-container">
-      <h2>Admin Login</h2>
+      <h2>Employee Login</h2>
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Email:</label>
@@ -45,4 +55,8 @@ const AdminLoginPage = ({ onLogin }) => {
   );
 };
 
-export default AdminLoginPage;
+EmployeeLoginPage.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};
+
+export default EmployeeLoginPage;

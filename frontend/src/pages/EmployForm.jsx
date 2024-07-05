@@ -8,8 +8,8 @@ const EmployeeForm = () => {
   const [status, setStatus] = useState('Active');
   const [team, setTeam] = useState('');
   const [department, setDepartment] = useState('');
+  const [employees, setEmployees] = useState([]);
 
- 
   useEffect(() => {
     const storedData = localStorage.getItem('userData');
     if (storedData) {
@@ -25,7 +25,7 @@ const EmployeeForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-   const newEmployee = {
+    const newEmployee = {
       employeeId,
       employeeName,
       email,
@@ -35,24 +35,60 @@ const EmployeeForm = () => {
       department,
     };
 
-    localStorage.setItem('userData', JSON.stringify(newEmployee));
-    alert('User data saved!');
+    // Update employees state with new employee
+    setEmployees([...employees, newEmployee]);
+
+    // Store employees in localStorage
+    localStorage.setItem('userData', JSON.stringify([...employees, newEmployee]));
 
     // Clear form fields
-    setEmployeeId('');
+    setEmployeeID('');
     setEmployeeName('');
     setEmail('');
     setRole('');
-    setStatus('');
+    setStatus('Active');
     setTeam('');
     setDepartment('');
-
   };
 
-  
+  const displayEmployees = () => {
+    // Render employee details in a table format
+    return (
+      <div className="employee-list">
+        <h2>Employee Details</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Team</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody>
+            {employees.map((emp, index) => (
+              <tr key={index}>
+                <td>{emp.employeeId}</td>
+                <td>{emp.employeeName}</td>
+                <td>{emp.email}</td>
+                <td>{emp.role}</td>
+                <td>{emp.status}</td>
+                <td>{emp.team}</td>
+                <td>{emp.department}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
 
   return (
     <div className="home">
+        <h2>Add Employee</h2>
       <form onSubmit={handleSubmit} className="employee-form">
         <div className="form-group">
           <label>Employee ID:</label>
@@ -92,7 +128,11 @@ const EmployeeForm = () => {
         </div>
         <div className="form-group">
           <label>Status:</label>
-          <select value={status} onChange={(e) => setStatus(e.target.value)} required>
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            required
+          >
             <option value="Active">Active</option>
             <option value="Probation">Probation</option>
             <option value="Onboarding">Onboarding</option>
@@ -121,9 +161,10 @@ const EmployeeForm = () => {
           Add Employee
         </button>
       </form>
-    </div>
 
-    
+      {/* Conditionally render employee details */}
+      {employees.length > 0 && displayEmployees()}
+    </div>
   );
 };
 

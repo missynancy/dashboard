@@ -536,3 +536,34 @@ button.generated:hover {
 button {
   margin: 5px;
 }
+
+
+/* start */
+/* .start{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.login{
+  width: 400px;
+  padding: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.137);
+}
+.loginbtn{
+  display: flex;
+  justify-content: space-between;
+}
+.loginbtn button{
+  background-color: transparent;
+  color: #0c0c0c;
+  border: 1px solid black;
+  cursor: pointer;
+} 
+.loginbtn button:hover{
+  background-color: #1e8f08;
+  color: #fff;
+  border: none;
+} */
