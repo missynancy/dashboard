@@ -8,7 +8,7 @@ const AdminLoginPage = ({ onLogin }) => {
     event.preventDefault();
 
     // Simulate admin login process
-    if (email == 'admin@example.com' && password == 'adminpassword') {
+    if (email == 'nancymissy187@gmail.com' && password == 'me') {
       onLogin({ email, role: 'admin' });
     } else {
       alert('Invalid email or password');
