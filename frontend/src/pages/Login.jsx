@@ -9,16 +9,16 @@ const Login = ({onLogin}) => {
     const navigate = useNavigate();
     const handleSubmit = (event) => {
       event.preventDefault();
-  
+
       // Simulate admin login process
       if (email == 'nancymissy187@gmail.com' && password == 'me') {
         // onLogin({ email, role: 'admin' });
-        navigate(<Secondary></Secondary>);
+        navigate('/dashboard');
       } else {
         alert('Invalid email or password');
       }
     };
-  
+
     return (
       <div className="login-container">
         <h2>Admin Login</h2>

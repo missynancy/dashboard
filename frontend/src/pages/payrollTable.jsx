@@ -1,7 +1,10 @@
 import React from 'react';
+import Index from '../components/Index';
 
 const PayrollTable = ({ payrolls, generatePayslip }) => {
   return (
+    <>
+    <Index/>
     <div className="home">
         <div className="table-head">
             <h1>Payroll</h1>
@@ -43,6 +46,7 @@ const PayrollTable = ({ payrolls, generatePayslip }) => {
             </tbody>
         </table>
     </div>
+    </>
   );
 };
 

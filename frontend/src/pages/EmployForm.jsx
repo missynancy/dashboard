@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Index from '../components/Index';
 
 const EmployeeForm = () => {
   const [employeeId, setEmployeeID] = useState('');
@@ -87,6 +88,8 @@ const EmployeeForm = () => {
   };
 
   return (
+    <>
+    <Index/>
     <div className="home">
         <h2>Add Employee</h2>
       <form onSubmit={handleSubmit} className="employee-form">
@@ -165,6 +168,7 @@ const EmployeeForm = () => {
       {/* Conditionally render employee details */}
       {employees.length > 0 && displayEmployees()}
     </div>
+    </>
   );
 };
 

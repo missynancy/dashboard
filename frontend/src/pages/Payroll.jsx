@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PayslipModal from './Payslip'; // Import the modal component
+import Index from '../components/Index';
 
 const Payroll = () => {
   const [employeeId, setEmployeeId] = useState('');
@@ -63,6 +64,8 @@ const Payroll = () => {
   };
 
   return (
+    <>
+    <Index/>
     <div className='home'>
       <div className='payroll'>
         <h1>Payroll System</h1>
@@ -174,6 +177,7 @@ const Payroll = () => {
         <PayslipModal payroll={selectedPayroll} onClose={closeModal} />
       )}
     </div>
+    </>
   );
 };
 

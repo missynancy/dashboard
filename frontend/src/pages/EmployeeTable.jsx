@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StatusButton from './Status';
+import Index from '../components/Index';
 
 const EmployeeTable = ({ employees }) => {
   return (
+    <>
+    <Index/>
     <div className="home">
         <table>
             <thead>
@@ -32,6 +35,7 @@ const EmployeeTable = ({ employees }) => {
             </tbody>
         </table>
     </div>
+    </>
   );
 };
 

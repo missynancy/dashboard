@@ -1,12 +1,10 @@
 import { Outlet } from 'react-router-dom'
-
-const Secondary = () => {
+const LoginLayout = () => {
   return (
     <>
-    
     <Outlet/>
     </>
   )
 }
 
-export default Secondary
+export default LoginLayout
