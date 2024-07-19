@@ -5,8 +5,10 @@ import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx';
 import LoginLayout from './layout/LoginLayout.jsx';
 import Payroll from './pages/Payroll.jsx';
+import Checklist from './pages/Checklist.jsx';
 import './index.css';
 import EmployeeForm from './pages/EmployForm.jsx';
+import Attendance from './pages/Attendance.jsx';
 
 
 const router = createBrowserRouter(
@@ -17,7 +19,9 @@ const router = createBrowserRouter(
             <Route index element={<Home/>}/>
         </Route>
         <Route path='/employee' element={<EmployeeForm/>}/>
-        
+        <Route path='/payroll' element={<Payroll/>}/>
+        <Route path='/checklist' element={<Checklist/>}/>
+        <Route path='/attendance' element={<Attendance/>}/>
     </Route>
 
 ));

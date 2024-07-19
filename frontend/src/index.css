@@ -45,24 +45,23 @@ button:hover{
   margin-left: -13px;
   height: 100vh;
 }
+.navbar{
+  display: flex;
+}
 
 .navbar ul{
-  align-items: start;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   justify-content: center;
 
 }
 .navbar ul li{
   list-style: none;
-  
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5px 0 5px;
+  margin-top: 15px;
   width: 100%;
-  align-items: center;
 
 }
 .navbar li a{
@@ -70,13 +69,17 @@ button:hover{
   color: black;
   padding: 10px 10px;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
-.navbar li a.active,
-.navbar li a:hover{
+.active{
   background-color: rgb(25, 172, 25);
   color: #fff;
-
-
+}
+.navbar li a:not(.active):hover{
+  border-bottom: 1px solid rgb(25, 172, 25);
 }
 .bx-chevron-right{
   font-size: 15px;
@@ -132,6 +135,12 @@ header img{
   background: transparent;
   font-weight: 20px;
   font-weight: 600;
+}
+.box-icon{
+  background-color: green;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 3px;
 }
 
 /* topbar */
@@ -221,35 +230,39 @@ header img{
 }
 
 /* profile */
+
+
 .profile{
   width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(247, 245, 245);
   border-radius: 10px;
-  padding: 10px;
-  
-
+  padding: 40px 0 40px 0;
+  margin-top: 30px;
+  background-color: #1e8f08;
 }
 .profile-1{
-  width: 60%;
+  width: 58%;
   height: 100%;
   margin: 0;
   text-align: start; 
-
+  padding: 10px;
+  background-color: #d6f5d0;
 }
 .profile-1 h1{
  margin: 0;
 }
 .profile-2{
-  
-  max-width: 39%;
-  width: 100%;
-  
   padding: 10px;
+  width: 38%;
+  height: 100%;
+  margin: 0;
+  text-align: start; 
+  background-color: #d6f5d0;
 }
+
 .status{
   width: 100%;
   display: flex;
@@ -538,32 +551,89 @@ button {
 }
 
 
-/* start */
-/* .start{
+.login-container{
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
+  background-color: rgb(250, 247, 247);
 }
 .login{
   width: 400px;
   padding: 10px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgb(163, 230, 163);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border:  1px solid black;
 }
-.loginbtn{
+.login input{
+  width: 100%;
+}
+.login input:focus{
+  box-shadow: 0 0 25px rgb(163, 230, 163);
+}
+.login button{
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+
+/* checklist */
+.checklist{
+  align-items: center;
+  justify-content: center;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.checklist-box{
+  width: 100%;
+  display: flex;
+  margin: 0;
   justify-content: space-between;
 }
-.loginbtn button{
-  background-color: transparent;
-  color: #0c0c0c;
-  border: 1px solid black;
-  cursor: pointer;
-} 
-.loginbtn button:hover{
-  background-color: #1e8f08;
-  color: #fff;
-  border: none;
-} */
+.todolist{
+  width: 31%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+}
+.addtask{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 80%;
+}
+.checklist button{
+  font-size: 1.3rem;
+  padding: 5px 10px 5px 10px;
+}
+.checklist ol{
+  width: 100%;
+  padding: 0;
+}
+.check-list{
+  font-size: 1.3rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 3px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task{
+  flex: 1;
+}
+.del-btn, .up-btn, .down-btn{
+  padding: 8px 12px;
+  margin-left: 10px;
+}

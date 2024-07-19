@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import {  NavLink,} from 'react-router-dom';
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
 import img4 from '../assets/img4.jpg';
+
 function Index(){
     return(
         <body>
@@ -25,33 +26,28 @@ function Index(){
                     <nav className="navbar">
                         <ul>
                             <li>
-                                <Link to='/dashboard' className='active'><i className='bx bxs-dashboard'></i> Dashbard</Link>
-                                <i className='bx bx-chevron-right'></i>
+                                <NavLink to='/dashboard' ><i className='bx bxs-dashboard'></i> Dashbard <i className='bx bx-chevron-right'></i></NavLink>
+                                
                             </li>
                             <li>
-                                <Link to='/employee'><i className='bx bx-user'></i> Employee</Link>
-                                <i className='bx bx-chevron-right'></i>
+                                <NavLink to='/attendance'><i className='bx bxs-calendar-check'></i> Attendance <i className='bx bx-chevron-right'></i></NavLink>
+                                
                             </li>
                             <li>
-                                <Link to='/checklist'><i className='bx bx-list-check'></i> Checklist</Link>
-                                <i className='bx bx-chevron-right'></i>
+                                <NavLink to='/employee'><i className='bx bx-user'></i> Employee <i className='bx bx-chevron-right'></i></NavLink>
+                                
                             </li>
                             <li>
-                                <a href="#"><i className='bx bx-time'></i> Time Off</a>
-                                <i className='bx bx-chevron-right'></i>
+                                <NavLink to='/checklist'><i className='bx bx-list-check'></i> Checklist <i className='bx bx-chevron-right'></i></NavLink>
+                                
                             </li>
-                            <li>
-                                <a href="#"><i className='bx bxs-calendar-check'></i> Attendance</a>
-                                <i className='bx bx-chevron-right'></i>
+                            
+                            
+                            <li >
+                                <NavLink to='/payroll'><i className='bx bxs-calendar-alt'></i> Payroll <i className='bx bx-chevron-right'></i></NavLink>
+                                
                             </li>
-                            <li>
-                                <Link to='/payroll'><i className='bx bxs-calendar-alt'></i> Payroll</Link>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
-                            <li>
-                                <a href="#"><i className='bx bx-git-pull-request'></i> Recruitment</a>
-                                <i className='bx bx-chevron-right'></i>
-                            </li>
+                            
                         </ul>
                     </nav>
                     <div className="card">
@@ -61,7 +57,7 @@ function Index(){
                                 <img src={img2} alt="" />
                                 <img src={img3} alt="" />
                             </div>
-                            <i className='bx bxs-video'></i>
+                            <i className='bx bxs-video box-icon'></i>
                         </div>
                         <h4>Daily Meetings</h4>
                         <p>9:00am - 10:00pm On Zoom</p>

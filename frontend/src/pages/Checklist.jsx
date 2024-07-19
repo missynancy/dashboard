@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Index from "../components/Index";
 import 'boxicons';
 
 function InputSection({ newTask, handleInput, addTask }) {
@@ -33,6 +34,8 @@ function TaskList({ tasks, setTasks }) {
     }
 
     return (
+        <>
+        
         <ol>
             {tasks.map((task, index) =>
                 <li key={index} className="check-list">
@@ -49,6 +52,7 @@ function TaskList({ tasks, setTasks }) {
                 </li>
             )}
         </ol>
+        </>
     );
 }
 
@@ -94,26 +98,31 @@ function Checklist() {
     }
 
     return (
-        <div className="checklist">
-            <h1>Checklist</h1>
-            <div className="checklist-box">
-                <div className="todolist">
-                    <h3>Tasks</h3>
-                    <InputSection newTask={newTask} handleInput={handleTaskInput} addTask={addTask} />
-                    <TaskList tasks={tasks} setTasks={setTasks} />
-                </div>
-                <div className="todolist">
-                    <h3>Ongoing Task</h3>
-                    <InputSection newTask={newOngoingTask} handleInput={handleOngoingInput} addTask={addOngoing} />
-                    <TaskList tasks={ongoing} setTasks={setOngoing} />
-                </div>
-                <div className="todolist">
-                    <h3>Completed Task</h3>
-                    <InputSection newTask={newCompletedTask} handleInput={handleCompletedInput} addTask={addComplete} />
-                    <TaskList tasks={completed} setTasks={setCompleted} />
+        <>
+        <Index/>
+        <div className="home">
+            <div className="checklist">
+                <h1>Checklist</h1>
+                <div className="checklist-box">
+                    <div className="todolist">
+                        <h3>Tasks</h3>
+                        <InputSection newTask={newTask} handleInput={handleTaskInput} addTask={addTask} />
+                        <TaskList tasks={tasks} setTasks={setTasks} />
+                    </div>
+                    <div className="todolist">
+                        <h3>Ongoing Task</h3>
+                        <InputSection newTask={newOngoingTask} handleInput={handleOngoingInput} addTask={addOngoing} />
+                        <TaskList tasks={ongoing} setTasks={setOngoing} />
+                    </div>
+                    <div className="todolist">
+                        <h3>Completed Task</h3>
+                        <InputSection newTask={newCompletedTask} handleInput={handleCompletedInput} addTask={addComplete} />
+                        <TaskList tasks={completed} setTasks={setCompleted} />
+                    </div>
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Index from '../components/Index';
+import StatusButton from './Status';
 
 const EmployeeForm = () => {
   const [employeeId, setEmployeeID] = useState('');
@@ -76,7 +77,7 @@ const EmployeeForm = () => {
                 <td>{emp.employeeName}</td>
                 <td>{emp.email}</td>
                 <td>{emp.role}</td>
-                <td>{emp.status}</td>
+                <td><StatusButton status={emp.status} /></td>
                 <td>{emp.team}</td>
                 <td>{emp.department}</td>
               </tr>

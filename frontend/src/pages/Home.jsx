@@ -1,13 +1,23 @@
+import { useEffect, useState } from 'react';
 import img1 from '../assets/img1.jpg';
+ //import {BarCharts, Bar} from 'recharts'
+  //import Performance from '../components/Performance';
+//   import Attendance from './Attendance'; 
+
 
 const Home = () => {
+    
+    
 	return (
 	    <>
-            <div className="home">
+            <div className="home ">
+                <div className="profile-head">
+                    <h2>Hi, Lewis</h2>
+                    <p>Your HR status report</p>
+                    </div>
                 <div className="profile">
                     <div className="profile-1">
-                        <h2>Hi, Lewis</h2>
-                        <p>Your HR status report</p>
+                        
                         <div className="status">
                             <div className="status-container">
                                 <div className="status-top">
@@ -52,11 +62,20 @@ const Home = () => {
                                     </div>
                             </div>
                         </div>
-                        <div className="profile-2">hello</div>
+
                     </div> 
+                    <div className="profile-2">
+                        {/* <Performance/> */}
+                    </div>
                 </div>
-                <div className="middle-header">
-                    <h2>Employees</h2>
+                {/* <div className="middle-header">
+                    <h2>Attendance</h2>
+                    <p style={{
+                        backgroundColor: 'black',
+                        padding: '5px 10px',
+                        color: '#fff',
+                        borderRadius: '5px'
+                    }}>{currentDate}</p>
                     <div className="filter">
                         <form action="">
                             <div className="search">
@@ -66,10 +85,11 @@ const Home = () => {
                         </form>
                         <button>Add filter</button>
                     </div>
-                </div>
-                <div className="attendance">
+                </div> */}
+                {/* <div className="attendance">
                     <div className="attendance-list">
-                        <table className="table">
+                        <Attendance />
+                         <table className="table">
                             <thead>
                                 <tr>
                                     <th>Employess name</th>
@@ -97,7 +117,7 @@ const Home = () => {
                                     <td><i className='bx bx-checkbox'> </i> <img src={img1} alt="" />  Peter Kimani</td>
                                     <td>kimanip140@gmail.com</td>
                                     <td>UI/UX DEsigner</td>
-                                    <td><button className='active-btn'>active</button></td>
+                                    <td><button className='active-btn'></button></td>
                                     <td><img src={img1} alt="" /> James</td>
                                     <td><button className='team'>Design Team</button></td>
                                     <td>Orix Dubai</td>
@@ -184,9 +204,9 @@ const Home = () => {
                                     <td><i className='bx bx-dots-horizontal-rounded '></i></td>
                                 </tr>
                             </tbody>
-                        </table>
-                    </div>
-                </div>
+                        </table> 
+                    </div> 
+                </div>*/}
             </div>  
 	    </>
 	);

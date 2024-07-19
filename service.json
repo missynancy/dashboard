@@ -1,0 +1,29 @@
+{
+    "attendance": [
+      {
+        "id": 1,
+        "employeeId": "E001",
+        "employeeName": "Lewis",
+        "date": "2024-07-18T00:00:00Z",
+        "status": "Present",
+        "department": "Design"
+      },
+      {
+        "id": 2,
+        "employeeId": "E002",
+        "employeeName": "Lucy",
+        "date": "2024-07-18T00:00:00Z",
+        "status": "Absent",
+        "department": "Design"
+      },
+      {
+        "id": 3,
+        "employeeId": "E003",
+        "employeeName": "Leah",
+        "date": "2024-07-18T00:00:00Z",
+        "status": "Present",
+        "department": "Design"
+      }
+    ]
+  }
+  
